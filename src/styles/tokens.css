@@ -1,0 +1,21 @@
+:root {
+  /* Figma: Colour/White/100 */
+  --colour-white-100: #ffffff;
+  /* Figma: Colour/Gray/Light text */
+  --colour-gray-light-text: #909090;
+  /* Screen background. Sampled from the Figma preview, not a named token. Confirm with design. */
+  --colour-screen-bg: #2a2a2a;
+  --colour-screen-border: rgba(255, 255, 255, 0.84);
+
+  /* Figma: MR/Primary/Bold/H3 */
+  --type-h3-size: 110px;
+  /* Figma: MR/Primary/Bold/H4 */
+  --type-h4-size: 90px;
+  /* Figma: MR/Secondary/Regular/P2 */
+  --type-p2-size: 52px;
+  --type-line-height: 1.3;
+
+  --radius-card: 40px;
+  --blur-card: 25px;
+  --font-family: "Lexend", system-ui, sans-serif;
+}

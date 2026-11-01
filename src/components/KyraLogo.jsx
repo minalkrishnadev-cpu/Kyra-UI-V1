@@ -1,0 +1,13 @@
+import "./KyraLogo.css";
+
+/** Figma: "KYRA Logo" (mark + wordmark). */
+export default function KyraLogo() {
+  return (
+    <div className="kyra-logo">
+      <img className="kyra-logo__mark" src="/assets/brand/kyra-logo.png" alt="KYRA" />
+      <div className="kyra-logo__text">
+        <img src="/assets/brand/kyra-wordmark.png" alt="" />
+      </div>
+    </div>
+  );
+}

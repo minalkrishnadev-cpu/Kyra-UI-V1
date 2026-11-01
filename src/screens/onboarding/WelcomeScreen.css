@@ -1,0 +1,17 @@
+.welcome__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 200px;
+  width: 670px;
+  margin: 166px auto 0;
+}
+.welcome__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  text-align: center;
+  font-weight: 700;
+}
+.welcome__heading { margin: 0; width: 670px; font-size: 110px; line-height: var(--type-line-height); }
+.welcome__intro { margin: 0; width: 670px; font-size: 66px; line-height: var(--type-line-height); }

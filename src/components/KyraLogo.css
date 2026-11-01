@@ -1,0 +1,24 @@
+.kyra-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 57px;
+  width: 251px;
+}
+.kyra-logo__mark { width: 251px; height: 251px; display: block; }
+.kyra-logo__text {
+  position: relative;
+  width: 250px;
+  height: 200px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.kyra-logo__text img {
+  position: absolute;
+  display: block;
+  max-width: none;
+  height: 71.67%;
+  width: 111%;
+  left: -5.5%;
+  top: 20.16%;
+}

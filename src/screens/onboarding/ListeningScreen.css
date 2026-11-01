@@ -1,0 +1,12 @@
+.listening__kyra {
+  position: absolute;
+  top: 625px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 388px;
+  height: 388px;
+}
+.listening__kyra img { width: 251px; height: 251px; display: block; }
