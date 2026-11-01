@@ -99,6 +99,7 @@ export default function WelcomeScreen() {
             height: 48,
             borderRadius: "50%",
             border: "3px solid white",
+            // display: status?.toLowerCase().includes("pinch") ? "block" : "none",
             backgroundColor: "#584149",
             boxShadow: "0 0 12px rgba(0,0,0,0.4)",
             pointerEvents: "none",
