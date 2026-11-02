@@ -13,6 +13,18 @@ body { font-family: var(--font-family); }
   border: 1px solid var(--colour-screen-border);
   font-family: var(--font-family);
 }
+.screen__text {
+  margin: 0;
+  width: 100%;
+  text-align: center;          /* added */
+  font-weight: 400;
+  font-size: 60px;
+  line-height: var(--type-line-height);
+}
+.screen__content--analysing {
+  gap: 120px;
+  padding: 0 87px;             /* (1080 - 905) / 2 */
+}
 .screen__content {
   display: flex;
   flex-direction: column;

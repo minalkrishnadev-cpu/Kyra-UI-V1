@@ -15,6 +15,7 @@ import SpecificScreen from "./screens/onboarding/SpecificScreen.jsx";
 import BuildYourProfileScreen from "./screens/onboarding/BuildYourProfileScreen.jsx";
 import ListeningScreen from "./screens/onboarding/ListeningScreen.jsx";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AnalysisScreen from "./screens/onboarding/AnalysisScreen.jsx";
 
 /**
  * Onboarding flow. The transitions below are inferred from the Figma notes
@@ -36,8 +37,10 @@ export default function App() {
      <Route path="/welcome/looking-for-today/specificscreen" element={<SpecificScreen />} />
       <Route path="/welcome/looking-for-today/surpriseme/malepicks" element={<MaleSomethingSpecificScreen />} />
         <Route path="/welcome/looking-for-today/surpriseme/femalepicks" element={<FemaleSomethingSpecificScreen />} />
+        <Route path="/welcome/looking-for-today/surpriseme/analysis" element={<AnalysisScreen />} />
          <Route path="/welcome/looking-for-today/specificscreen/voicesearch" element={<TellUsWhatYouHaveInMindScreen />} />
           <Route path="/welcome/looking-for-today/specificscreen/voicesearch/listening" element={<ListeningScreen />} />
+           <Route path="/welcome/looking-for-today/specificscreen/voicesearch/listening" element={<ListeningScreen />} />
   </Routes>
   </ScreenFrame>
   </HandTrackingProvider>
