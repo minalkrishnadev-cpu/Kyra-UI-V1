@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://minalkrishnadev-cpu/Kyra-UI-V1",
+ "homepage": "https://minalkrishnadev-cpu.github.io/Kyra-UI-V1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -25,7 +25,7 @@ import AnalysisScreen from "./screens/onboarding/AnalysisScreen.jsx";
 export default function App() {
   return (
 
-  <BrowserRouter>
+  <BrowserRouter basename="/Kyra-UI-V1">
   <CameraProvider>
     <HandTrackingProvider>
   <ScreenFrame>
