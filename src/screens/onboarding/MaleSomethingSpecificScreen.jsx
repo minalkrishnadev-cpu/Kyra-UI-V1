@@ -3,10 +3,10 @@ import OptionCard from "../../components/OptionCard.jsx";
 
 // NOTE: both accessory cards are labelled "Accessories" in the Figma file.
 const OPTIONS = [
-  { id: "tops", label: "Tops", icon: "/assets/icons/tops.png", iconWidth: 200 },
-  { id: "bottoms", label: "Bottoms", icon: "/assets/icons/bottoms.png", iconWidth: 200 },
-  { id: "accessories-a", label: "Accessories", icon: "/assets/icons/shoes.png", iconWidth: 200 },
-  { id: "accessories-b", label: "Accessories", icon: "/assets/icons/glasses.png", iconWidth: 244 },
+  { id: "tops", label: "Tops", icon: `${import.meta.env.BASE_URL}/assets/icons/tops.png`, iconWidth: 200 },
+  { id: "bottoms", label: "Bottoms", icon: `${import.meta.env.BASE_URL}/assets/icons/bottoms.png`, iconWidth: 200 },
+  { id: "accessories-a", label: "Accessories", icon: `${import.meta.env.BASE_URL}/assets/icons/shoes.png`, iconWidth: 200 },
+  { id: "accessories-b", label: "Accessories", icon: `${import.meta.env.BASE_URL}/assets/icons/glasses.png`, iconWidth: 244 },
 ];
 
 /** Figma: Onboarding / "Male Something specific" (2043:9935) */

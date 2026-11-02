@@ -5,10 +5,10 @@ export default function AppHeader({ onKyraClick, onProfileClick, paddingX = 18 }
   return (
     <header className="app-header" style={{ paddingInline: paddingX }}>
       <button type="button" className="app-header__kyra" onClick={onKyraClick} aria-label="Kyra">
-        <img src="/assets/icons/kyra-star.png" alt="" />
+        <img src={`${import.meta.env.BASE_URL}/assets/icons/kyra-star.png`} alt="" />
       </button>
       <button type="button" className="app-header__profile" onClick={onProfileClick} aria-label="Profile">
-        <img src="/assets/icons/user-profile.png" alt="" />
+        <img src={`${import.meta.env.BASE_URL}/assets/icons/user-profile.png`} alt="" />
       </button>
     </header>
   );

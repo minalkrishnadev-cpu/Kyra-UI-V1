@@ -108,7 +108,7 @@ export default function ListeningScreen() {
         <span className="listening__ring listening__ring--2" />
         <span className="listening__ring listening__ring--3" />
         <span className="listening__glow" />
-        <img src="/assets/brand/kyra-talking.png" alt="" />
+        <img src={`${import.meta.env.BASE_URL}/assets/brand/kyra-talking.png`} alt="" />
       </div>
 
       <div className="listening__transcript" aria-live="polite">
