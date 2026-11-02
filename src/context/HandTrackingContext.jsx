@@ -226,8 +226,9 @@ import { FilesetResolver, HandLandmarker } from "@mediapipe/tasks-vision";
 import { useCamera } from "./CameraContext.jsx";
 
 // Files served from /public (see setup steps).
-const WASM_URL = "/mediapipe/wasm";
-const MODEL_URL = "/mediapipe/hand_landmarker.task";
+//const WASM_URL = "/mediapipe/wasm";
+const WASM_URL = `${import.meta.env.BASE_URL}mediapipe/wasm`;
+const MODEL_URL = `${import.meta.env.BASE_URL}mediapipe/hand_landmarker.task`;
 
 const PINCH_ON = 0.25;  // thumb-index gap / hand size below this = pinch
 const PINCH_OFF = 0.4;  // must open past this to release
