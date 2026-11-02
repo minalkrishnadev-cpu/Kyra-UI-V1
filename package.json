@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "assets": "bash scripts/download-assets.sh",
-    "predeploy": "npm run dev",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
