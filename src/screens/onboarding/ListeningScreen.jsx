@@ -84,6 +84,7 @@ export default function ListeningScreen() {
     onDone: (text) => {
       console.log("Voice input:", text);
       // TODO: send `text` to search / the next screen.
+      
     },
   });
 

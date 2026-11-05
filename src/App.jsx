@@ -16,6 +16,8 @@ import BuildYourProfileScreen from "./screens/onboarding/BuildYourProfileScreen.
 import ListeningScreen from "./screens/onboarding/ListeningScreen.jsx";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AnalysisScreen from "./screens/onboarding/AnalysisScreen.jsx";
+import HoldStillScreen from "./screens/onboarding/HoldStillScreen.jsx";
+import AnalysisResult from "./screens/onboarding/AnalysisResult.jsx";
 
 /**
  * Onboarding flow. The transitions below are inferred from the Figma notes
@@ -41,6 +43,8 @@ export default function App() {
          <Route path="/welcome/looking-for-today/specificscreen/voicesearch" element={<TellUsWhatYouHaveInMindScreen />} />
           <Route path="/welcome/looking-for-today/specificscreen/voicesearch/listening" element={<ListeningScreen />} />
            <Route path="/welcome/looking-for-today/specificscreen/voicesearch/listening" element={<ListeningScreen />} />
+  <Route path="/welcome/looking-for-today/surpriseme/analysis/holdstill" element={<HoldStillScreen />} />
+  <Route path="/welcome/looking-for-today/surpriseme/analysis/holdstill/analysisres" element={<AnalysisResult />} />
   </Routes>
   </ScreenFrame>
   </HandTrackingProvider>
