@@ -25,7 +25,7 @@ export default function SurpriseMeScreen() {
 
         <div className="button-row">
           {/* TODO: Outfit has no destination yet (the "analysis" flow in the Figma notes). */}
-          <OptionCard label="Outfit" width="w500" onClick={() => navigate(ANALYSIS)} />
+          <OptionCard onHowver label="Outfit" width="w500" onClick={() => navigate(ANALYSIS)} />
           <OptionCard
             label="Pick a Piece"
             width="w500"

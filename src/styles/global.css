@@ -71,6 +71,13 @@ body { font-family: var(--font-family); }
   cursor: pointer;
   overflow: hidden;
 }
+.option-card[data-hand-hovered="true"] {
+  background-color: #000000 !important; /* Your hover background color */
+  border-color: #e74787 !important;     /* Your hover border color */
+  transform: translateY(-2px);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  /* color: #000000 !important; */
+}
 .option-card--w500 { width: 500px; }
 .option-card--auto { width: auto; }
 .option-card__icon { display: block; height: 200px; }

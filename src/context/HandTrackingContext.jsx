@@ -398,9 +398,25 @@ export function HandTrackingProvider({ children, mirror = true }) {
           const el = cursorRef.current;
           if (el) {
             el.style.display = "block";
-            el.style.transform = `translate(${sx - 24}px, ${sy - 24}px) scale(${pinching ? 0.7 : 1})`;
+            el.style.transform = `translate(${sx - 24}px, ${sy - 24}px) scale(${pinching ? 0.2 : 0.5})`;
             el.style.backgroundColor = pinching ? "#010d01" : "#f6ecf0";
           }
+          document.querySelectorAll(CLICKABLE).forEach((btn) => {
+  const r = btn.getBoundingClientRect();
+  const isInside =
+    r.width > 0 &&
+    r.height > 0 &&
+    sx >= r.left &&
+    sx <= r.right &&
+    sy >= r.top &&
+    sy <= r.bottom;
+
+  if (isInside) {
+    btn.setAttribute("data-hand-hovered", "true");
+  } else {
+    btn.removeAttribute("data-hand-hovered");
+  }
+});
           say(pinching ? "Pinching" : "Hand detected: pinch to click");
           frameHandlers.current.forEach((fn) => fn({ landmarks: lm }));
 

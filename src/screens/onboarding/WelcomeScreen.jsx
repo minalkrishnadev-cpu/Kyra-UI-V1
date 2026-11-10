@@ -1,26 +1,4 @@
-// import AppHeader from "../../components/AppHeader.jsx";
-// import KyraLogo from "../../components/KyraLogo.jsx";
-// import "./WelcomeScreen.css";
 
-// /** Figma: Onboarding / "Welcome screen" (2043:8291) */
-// export default function WelcomeScreen() {
-//   return (
-//     <div className="screen welcome" >
-//       <AppHeader paddingX={32} />
-//       <div className="welcome__content">
-//         <KyraLogo />
-//         <div className="welcome__copy">
-//           <p className="welcome__heading">Welcome!</p>
-//           <p className="welcome__intro">
-//             I’m Kyra,
-//             <br />
-//             your personal shopping assistant!
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 import React, { useEffect, useRef, useState } from 'react';
 import { useCallback } from "react";
 import { createPortal } from "react-dom";
@@ -100,8 +78,8 @@ export default function WelcomeScreen() {
             borderRadius: "50%",
             border: "3px solid white",
             // display: status?.toLowerCase().includes("pinch") ? "block" : "none",
-            backgroundColor: "#584149",
-            boxShadow: "0 0 12px rgba(0,0,0,0.4)",
+            backgroundColor: "#eee9eb",
+            boxShadow: "0 0 2px rgba(0,0,0,0.4)",
             pointerEvents: "none",
             zIndex: 9999,
             transition: "background-color 0.1s ease",
