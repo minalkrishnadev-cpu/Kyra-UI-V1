@@ -29,14 +29,15 @@ import AppHeader from "../../components/AppHeader.jsx";
 import OptionCard from "../../components/OptionCard.jsx";
 
 /** Figma: Onboarding / "Surprise me" (2043:13011) */
-const MALE_PICKS = "/welcome/looking-for-today/surpriseme/malepicks";
-const FEMALE_PICKS = "/welcome/looking-for-today/surpriseme/femalepicks";
 const VOICE_SEARCH = "/welcome/looking-for-today/specificscreen/voicesearch";
-
+const SHOPFOR="/welcome/looking-for-today/surpriseme/shopfor"
 export default function SpecificScreen() {
   const navigate = useNavigate();
-  const [showShoppingFor, setShowShoppingFor] = useState(false);
-
+    const handleNavigation = (route) => {
+    navigate(`${SHOPFOR}?category=${encodeURIComponent(route)}`, {
+      state: { route },
+    });
+  };
   // No useHandPointer() needed: the shared detector turns a pinch into a click
   // on the nearest button, so these onClick handlers work for hand and mouse.
   return (
@@ -51,19 +52,9 @@ export default function SpecificScreen() {
           <OptionCard
             label="Pick a Piece"
             width="w500"
-            onClick={() => setShowShoppingFor(true)}
+            onClick={() => handleNavigation("somethingspecific")}
           />
         </div>
-
-        {showShoppingFor && (
-          <div className="shopping-for">
-            <h2 className="title title--h4">Who are we shopping for?</h2>
-            <div className="button-row">
-              <OptionCard label="Womenswear" width="w500" onClick={() => navigate(FEMALE_PICKS)} />
-              <OptionCard label="Menswear" width="w500" onClick={() => navigate(MALE_PICKS)} />
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

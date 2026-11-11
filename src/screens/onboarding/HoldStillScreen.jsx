@@ -1,8 +1,9 @@
-import { useNavigate } from "react-router-dom";
+
 import CameraGuide from "../../components/CameraGuide.jsx";
 import CameraFeed from "../../components/CameraFeed.jsx";
 import { useCamera } from "../../context/CameraContext.jsx";
 import { useBodyScan } from "../../hooks/useBodyScan.js";
+import { useNavigate,useLocation, useSearchParams  } from "react-router-dom";
 
 // Messages reuse the wording of the Too Far / Out of Frame / Multiple Faces / Too Close screens.
 const COPY = {
@@ -37,7 +38,12 @@ const COPY = {
 export default function HoldStillScreen() {
   const navigate = useNavigate();
   const { videoRef, streamRef } = useCamera();
-
+      const { location } = useLocation();
+  const [params] = useSearchParams();
+  const searchid = location?.id ?? params.get("category");
+const text = location?.text ?? params.get("q");
+console.log("inside - holdstill category "+searchid);
+console.log("inside - holdstill voice search "+text);
 //   const { state, count, error } = useBodyScan({
 //     videoRef,
 //     // The photo is passed to the next screen in memory only; it is not saved anywhere.
@@ -106,17 +112,18 @@ const { state, count, error } = useBodyScan({
   if (inPosition) {
     // Figma "Hold still": 110px title in a 791px box, 120px gap, then the green check.
     // During the countdown the check becomes the 3, 2, 1 in a matching circle.
+    //`${import.meta.env.BASE_URL}mediapipe/wasm`
     content = {
       title: "Great, hold still!",
       titleHeight: 256,
       contentWidth: 791,
       gap: 120,
-      bracketsSrc: "/assets/brand/viewfinder.png",
+      bracketsSrc: `${import.meta.env.BASE_URL}/assets/brand/greenframe.png`,
       badge:
         state === "countdown" ? (
           <div className="camera-guide__count">{count}</div>
         ) : (
-          <img className="camera-guide__badge" src="/assets/analysis/check-circle.svg" alt="" />
+          <img className="camera-guide__badge"  src={`${import.meta.env.BASE_URL}/assets/brand/greenframe.png`} alt=""/>
         ),
     };
   } else if (state === "error") {

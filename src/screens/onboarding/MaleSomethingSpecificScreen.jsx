@@ -1,16 +1,34 @@
 import AppHeader from "../../components/AppHeader.jsx";
 import OptionCard from "../../components/OptionCard.jsx";
 
+import { useNavigate,useLocation, useSearchParams  } from "react-router-dom";
+
 // NOTE: both accessory cards are labelled "Accessories" in the Figma file.
 const OPTIONS = [
-  { id: "tops", label: "Tops", icon: `${import.meta.env.BASE_URL}/assets/icons/tops.png`, iconWidth: 200 },
-  { id: "bottoms", label: "Bottoms", icon: `${import.meta.env.BASE_URL}/assets/icons/bottoms.png`, iconWidth: 200 },
-  { id: "accessories-a", label: "Accessories", icon: `${import.meta.env.BASE_URL}/assets/icons/shoes.png`, iconWidth: 200 },
-  { id: "accessories-b", label: "Accessories", icon: `${import.meta.env.BASE_URL}/assets/icons/glasses.png`, iconWidth: 244 },
+  { id: "tops-male", label: "Tops", icon: `${import.meta.env.BASE_URL}/assets/icons/tops.png`, iconWidth: 200 },
+  { id: "bottoms-male", label: "Bottoms", icon: `${import.meta.env.BASE_URL}/assets/icons/bottoms.png`, iconWidth: 200 },
+  { id: "footwear-male", label: "Footwear", icon: `${import.meta.env.BASE_URL}/assets/icons/shoes.png`, iconWidth: 200 },
+  { id: "accessories-male", label: "Accessories", icon: `${import.meta.env.BASE_URL}/assets/icons/glasses.png`, iconWidth: 244 },
 ];
 
+
 /** Figma: Onboarding / "Male Something specific" (2043:9935) */
+const ANALYSIS="/welcome/looking-for-today/surpriseme/analysis";
+const LISTENING="/welcome/looking-for-today/specificscreen/voicesearch";
 export default function MaleSomethingSpecificScreen({ onSelect }) {
+   const { state } = useLocation();
+  const [params] = useSearchParams();
+  const searchid = state?.id ?? params.get("category");
+  console.log(searchid);
+  const navigate = useNavigate();
+    const handleSelect = (id) => {
+    onSelect?.(id);
+    const target = searchid === "somethingspecific" ? LISTENING : ANALYSIS;
+
+    navigate(`${target}?category=${encodeURIComponent(id)}`, {
+      state: { id },
+    });
+  };
   return (
     <div className="screen">
       <AppHeader />
@@ -24,7 +42,7 @@ export default function MaleSomethingSpecificScreen({ onSelect }) {
               icon={o.icon}
               iconWidth={o.iconWidth}
               width="w500"
-              onClick={() => onSelect?.(o.id)}
+              onClick={() =>handleSelect(o.id)}
             />
           ))}
         </div>

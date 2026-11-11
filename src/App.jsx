@@ -18,6 +18,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AnalysisScreen from "./screens/onboarding/AnalysisScreen.jsx";
 import HoldStillScreen from "./screens/onboarding/HoldStillScreen.jsx";
 import AnalysisResult from "./screens/onboarding/AnalysisResult.jsx";
+import ShoppingForScreen from "./screens/onboarding/ShoppingForScreen.jsx";
 
 /**
  * Onboarding flow. The transitions below are inferred from the Figma notes
@@ -37,8 +38,10 @@ export default function App() {
      <Route path="/welcome/looking-for-today" element={<LookingForTodayScreen />} />
      <Route path="/welcome/looking-for-today/surpriseme" element={<SurpriseMeScreen />} />
      <Route path="/welcome/looking-for-today/specificscreen" element={<SpecificScreen />} />
-      <Route path="/welcome/looking-for-today/surpriseme/malepicks" element={<MaleSomethingSpecificScreen />} />
-        <Route path="/welcome/looking-for-today/surpriseme/femalepicks" element={<FemaleSomethingSpecificScreen />} />
+      <Route path="/welcome/looking-for-today/surpriseme/shopfor" element={<ShoppingForScreen />} />
+
+      <Route path="/welcome/looking-for-today/surpriseme/shopfor/malepicks" element={<MaleSomethingSpecificScreen />} />
+        <Route path="/welcome/looking-for-today/surpriseme/shopfor/femalepicks" element={<FemaleSomethingSpecificScreen />} />
         <Route path="/welcome/looking-for-today/surpriseme/analysis" element={<AnalysisScreen />} />
          <Route path="/welcome/looking-for-today/specificscreen/voicesearch" element={<TellUsWhatYouHaveInMindScreen />} />
           <Route path="/welcome/looking-for-today/specificscreen/voicesearch/listening" element={<ListeningScreen />} />

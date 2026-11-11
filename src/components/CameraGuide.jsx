@@ -11,6 +11,7 @@ import "./CameraGuide.css";
  * bracketsSrc:    red corners by default; the "Hold still" design uses green
  * badge:          optional element under the text (the green check, or the countdown circle)
  */
+ //bracketsSrc: `${import.meta.env.BASE_URL}/assets/brand/greenframe.png`,
 export default function CameraGuide({
   title,
   body,
@@ -19,7 +20,8 @@ export default function CameraGuide({
   contentWidth,
   gap,
   badge,
-  bracketsSrc = "/assets/brand/viewfinder.png",
+   //bracketsSrc: /assets/brand/greenframe.png`,
+  bracketsSrc = `${import.meta.env.BASE_URL}/assets/brand/viewfinder.png`,
   background,
   overlayOpacity = 0.66,
 }) {

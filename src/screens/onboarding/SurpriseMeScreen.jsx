@@ -7,10 +7,9 @@ import AppHeader from "../../components/AppHeader.jsx";
 import OptionCard from "../../components/OptionCard.jsx";
 
 /** Figma: Onboarding / "Surprise me" (2043:13011) */
-const MALE_PICKS = "/welcome/looking-for-today/surpriseme/malepicks";
-const FEMALE_PICKS = "/welcome/looking-for-today/surpriseme/femalepicks";
-const ANALYSIS="/welcome/looking-for-today/surpriseme/analysis";
 
+const ANALYSIS="/welcome/looking-for-today/surpriseme/analysis";
+const SHOPFOR="/welcome/looking-for-today/surpriseme/shopfor"
 export default function SurpriseMeScreen() {
   const navigate = useNavigate();
   const [showShoppingFor, setShowShoppingFor] = useState(false);
@@ -29,19 +28,9 @@ export default function SurpriseMeScreen() {
           <OptionCard
             label="Pick a Piece"
             width="w500"
-            onClick={() => setShowShoppingFor(true)}
+            onClick={() => navigate(SHOPFOR)}
           />
         </div>
-
-        {showShoppingFor && (
-          <div className="shopping-for">
-            <h2 className="title title--h4">Who are we shopping for?</h2>
-            <div className="button-row">
-              <OptionCard label="Womenswear" width="w500" onClick={() => navigate(FEMALE_PICKS)} />
-              <OptionCard label="Menswear" width="w500" onClick={() => navigate(MALE_PICKS)} />
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
