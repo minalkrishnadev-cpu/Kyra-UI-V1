@@ -398,7 +398,7 @@ export function HandTrackingProvider({ children, mirror = true }) {
           const el = cursorRef.current;
           if (el) {
             el.style.display = "block";
-            el.style.transform = `translate(${sx - 24}px, ${sy - 24}px) scale(${pinching ? 0.2 : 0.1})`;
+            el.style.transform = `translate(${sx - 24}px, ${sy - 24}px) scale(${pinching ? 0.2 : 0.5})`;
             el.style.backgroundColor = pinching ? "#010d01" : "#f6ecf0";
           }
           document.querySelectorAll(CLICKABLE).forEach((btn) => {
