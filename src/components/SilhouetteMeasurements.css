@@ -1,0 +1,62 @@
+.sil {
+  position: relative;
+  width: 312px;
+  height: 1073px;
+  flex: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.sil__img {
+  position: absolute;
+  left: 1px;
+  top: 0;
+  width: 309px;
+  height: 1073px;
+  object-fit: cover;
+  pointer-events: none;
+}
+.sil__overlay {
+  position: absolute;
+  left: 26px;
+  top: 46px;
+  width: 266px;
+  height: 988px;
+}
+.sil__svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+
+.sil__center { stroke: #fff; stroke-width: 2; stroke-dasharray: 4 6; opacity: 0.85; }
+.sil__dot { fill: #fff; }
+.sil__mark line { stroke: #fff; stroke-width: 2; transition: stroke 0.15s, stroke-width 0.15s; }
+.sil__mark circle { fill: #fff; transition: fill 0.15s; }
+.sil__mark.is-active line { stroke: #bbf38b; stroke-width: 4; }
+.sil__mark.is-active circle { fill: #bbf38b; }
+.sil__fill { fill: rgba(169, 137, 109, 0.55); }
+
+/* value labels: hidden until the figure is hovered */
+.sil__pill {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 4px 12px;
+  border-radius: 16px;
+  background: rgba(20, 20, 20, 0.75);
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.3;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+.sil__pill.is-on { opacity: 1; }
+.sil__pill.is-active { background: #bbf38b; color: #000; }
+
+.sil__zone {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.sil__zone:focus-visible { outline: 2px dashed #bbf38b; }

@@ -220,7 +220,7 @@ export default function AnalysisResult() {
            
         </section>
         <div className="button-row">
-            <OptionCard onHowver label="Continue" width="w500" alignCenter />
+            <OptionCard onHowver label="Continue" width="w500" onClick={() => navigate("/welcome/looking-for-today/surpriseme/analysis/holdstill/analysisres/fit")}/>
             </div>
       </div>
     </div>

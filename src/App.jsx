@@ -19,7 +19,7 @@ import AnalysisScreen from "./screens/onboarding/AnalysisScreen.jsx";
 import HoldStillScreen from "./screens/onboarding/HoldStillScreen.jsx";
 import AnalysisResult from "./screens/onboarding/AnalysisResult.jsx";
 import ShoppingForScreen from "./screens/onboarding/ShoppingForScreen.jsx";
-
+import FitAnalysisScreen from "./screens/onboarding/FitAnalysisScreen.jsx";
 /**
  * Onboarding flow. The transitions below are inferred from the Figma notes
  * ("I'M JUST BROWSING -> what are you looking for -> if OUTFIT -> analysis
@@ -48,6 +48,7 @@ export default function App() {
            <Route path="/welcome/looking-for-today/specificscreen/voicesearch/listening" element={<ListeningScreen />} />
   <Route path="/welcome/looking-for-today/surpriseme/analysis/holdstill" element={<HoldStillScreen />} />
   <Route path="/welcome/looking-for-today/surpriseme/analysis/holdstill/analysisres" element={<AnalysisResult />} />
+   <Route path="/welcome/looking-for-today/surpriseme/analysis/holdstill/analysisres/fit" element={<FitAnalysisScreen />} />
   </Routes>
   </ScreenFrame>
   </HandTrackingProvider>
